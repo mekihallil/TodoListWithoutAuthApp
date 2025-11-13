@@ -14,11 +14,8 @@ app.use(express.static(path.join(__dirname, "build")));
 
 app.use('/api', router)
 
-<<<<<<< HEAD
-app.get('/hello', (req, res) => {
-=======
+
 app.get('/', (req, res) => {
->>>>>>> 5339e57 (initial commit)
   res.sendFile(path.join(__dirname,"build/index.html"))
 })
 

@@ -14,7 +14,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/api', router)
 
+<<<<<<< HEAD
 app.get('/hello', (req, res) => {
+=======
+app.get('/', (req, res) => {
+>>>>>>> 5339e57 (initial commit)
   res.sendFile(path.join(__dirname,"public/index.html"))
 })
 

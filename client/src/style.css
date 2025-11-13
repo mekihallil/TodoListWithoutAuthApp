@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+/*CSS REST */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* App  */
+body {
+  background-color: #000712;
+  background-image: url("https://www.transparenttextures.com/patterns/bo-play.png");
+  color: white;
+
+
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+
+
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+/* container  */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* todos list  */
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  padding: 3rem 0 1rem;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.clickTodo{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 50%;
+  font-size: 1.4rem;
+  transition: all 0.2s;
+  word-break: break-word;
+  white-space: normal;
+
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 50%;
+  font-size: 1.4rem;
+  transition: all 0.2s;
+  word-break: break-word;
+  white-space: normal;
+
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.mutations {
+  display: flex;
+  gap: 0.75rem;
+}
+
+
+
+.todo__status,
+.todo__delete {
+  color: white;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: none;
+  font-size: 1.6rem;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+.todo__status {
+  font-size: 1.7rem;
+}
+
+/* form  */
+.form {
+  display: flex;
+  gap: 0.5rem;
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.form__input {
+  flex: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+.form__button {
+  border: none;
+  background-color: rgba(54, 54, 57, 0.75);
+  cursor: pointer;
+  color: white;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgba(89, 89, 90, 0.75);
+  }
+}
+
+@media (max-width: 514px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .form {
+    width: 95%;
+  }
+
+  .todo,
+  .clickTodo {
+    width: 95%;
+    font-size: 1.2rem;
+  }
+
+}

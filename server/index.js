@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json())
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "build")));
 
 app.use('/api', router)
 
@@ -19,7 +19,7 @@ app.get('/hello', (req, res) => {
 =======
 app.get('/', (req, res) => {
 >>>>>>> 5339e57 (initial commit)
-  res.sendFile(path.join(__dirname,"public/index.html"))
+  res.sendFile(path.join(__dirname,"build/index.html"))
 })
 
 const port = process.env.PORT || 4000;

@@ -10,12 +10,12 @@ const app = express();
 app.use(express.json())
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/api', router)
 
 app.get('/hello', (req, res) => {
-  res.status(200).json({ mssg: "Hello Peoples..." })
+  res.sendFile(path.join(__dirname,"public/index.html"))
 })
 
 const port = process.env.PORT || 4000;
